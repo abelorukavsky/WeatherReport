@@ -6,7 +6,7 @@
 //  Copyright © 2022 insede.me. All rights reserved.
 //
 
-protocol CitiesTableViewOutput: class {
+protocol CitiesTableViewOutput: PullToRefreshProtocol {
   /// - author: Anton Belorukavsky
   func viewIsReady()
 }

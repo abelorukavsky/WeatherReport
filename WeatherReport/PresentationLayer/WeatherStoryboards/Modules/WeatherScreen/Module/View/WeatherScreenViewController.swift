@@ -17,6 +17,7 @@ final class WeatherScreenViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
+    
     var output: WeatherScreenViewOutput!
     
     

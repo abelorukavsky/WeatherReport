@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CitiesTableViewController: UIViewController {
+final class CitiesTableViewController: UITableViewController {
 
 	// MARK: -
 	// MARK: Properties
@@ -20,6 +20,16 @@ final class CitiesTableViewController: UIViewController {
 		super.viewDidLoad()
 		output.viewIsReady()
 	}
+    
+    private func configureTableView() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc func refresh(_ refreshControl: UIRefreshControl) {
+        output.didTriggerPullToRefresh()
+    }
 
 }
 
